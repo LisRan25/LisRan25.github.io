@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Lisbeth Rankin Portfolio</title>
+
+	<link rel="stylesheet" href ="index.css"></link>
+
+</head>
+	
+<style>
+	:root
+	{
+	--muted:#8b90a0;
+	--accent:#e53b44;
+	}
+
+	.hero h1
+	{
+	font-size:clamp(2.2rem,5vw,3.4rem); /* scales with screen size, big on desktop */
+	line-height:1.08;
+	font-weight:700;
+	max-width:620px;
+	}
+
+	.hero p.intro
+	{
+	color:var(--muted);       /* dimmer gray, not the bright text color */
+	font-size:1.08rem;
+	max-width:520px;          /* caps line length so it doesn't stretch full-width */
+	}
+
+	.eyebrow
+	{
+	color:var(--accent);      /* small label, uses your one accent color */
+	font-size:.85rem;
+	}
+
+	.hero
+	{
+	padding:100px 0 80px;     /* generous space above/below the whole section */
+	}
+
+</style>
+<body>
+	<div class="page-wrap">
+	<section class="hero">
+		<h1>Lisbeth Rankin</h1>
+		<p class="eyebrow">Game Programmer</p>
+		<p class ="intro">Gameplay programmer focused on building out systems that allows players to immerse themselves in the worlds I help build.</p>
+	</section>
+	
+	<section id="work">
+		<h2>Personal & Jam Projects</h2>
+		<div class="projects-grid" id="projects-grid-personal"></div>
+
+		<h2>University Projects</h2>
+		<div class="projects-grid" id="projects-grid-uni"></div>
+	</section>
+
+	</div>
+
+	<div class="modal-backdrop" id="modal-backdrop">
+		<div class="modal">
+			
+			<button class="modal-close" id="modal-close">✕</button>
+			
+			<div class="modal-body">
+				<h3 id="modal-title"></h3>
+				<p id="modal-role"></p>
+				<p id="modal-blurb"></p>
+				<p id="modal-contribution"></p>
+			</div>
+			
+			<div class="modal-media-wrap">
+				<button class="media-nav prev" id="media-prev">‹</button>
+				<img class="modal-media" id="modal-media" src="" alt="">
+					<button class="media-nav next" id="media-next">›</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="index.js"></script>
+	
+</body>
+</html>
