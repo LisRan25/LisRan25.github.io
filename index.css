@@ -40,7 +40,7 @@ body
   border-color:var(--accent);
 }
 
-.modal-backdrop
+.project-backdrop
 {
   position:fixed; inset:0;
   background:rgba(10,12,18,.75);
@@ -74,12 +74,12 @@ body
   margin:0;
 }
 
-.modal-backdrop.open
+.project-backdrop.open
 {
   opacity:1; pointer-events:auto;
 }
 
-.modal
+.project
 {
   background:#1b2030;
   border:1px solid #2c3348;
@@ -88,18 +88,18 @@ body
   max-height:85vh; overflow-y:auto;
 }
 
-.modal-media
+.project-media
 {
   width:100%; aspect-ratio:16/9;
   background:#0e1117; object-fit:cover; display:block;
 }
 
-.modal-body
+.project-body
 { 
   padding:28px 30px; 
 }
 
-.modal-close
+.project-close
 {
   cursor:pointer; float:right; margin:12px;
   width:32px; height:32px; border-radius:6px;
@@ -114,7 +114,7 @@ body
   padding:0 24px;
 }
 
-.modal-media-wrap{ position:relative; }
+.project-media-wrap{ position:relative; }
 
 .media-nav
 {
