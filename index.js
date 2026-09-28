@@ -180,6 +180,7 @@ function renderGrid(list, containerId)
       <p class="card-tags">${p.tags}</p>
     `;
     card.addEventListener("click", () => openProject(list, i));
+    card.addEventListener("mouseenter", () => { new Image().src = encodeURI(p.gifs[0]); }, { once: true });
     grid.appendChild(card);
   });
 }
@@ -188,7 +189,8 @@ const backdrop = document.getElementById("project-backdrop");
 
 document.getElementById("project-close").addEventListener("click", () => 
 {
-  backdrop.classList.remove("open");
+    backdrop.classList.remove("open");
+    document.getElementById("project-media").removeAttribute("src");
 });
 
 
@@ -198,10 +200,24 @@ let currentIndex = 0;
 function showMedia(i) 
 {
     const media = document.getElementById("project-media");
+    const wrap = media.parentElement;
     const captionEl = document.getElementById("media-caption");
     currentIndex = i;
 
-    media.src = encodeURI(currentProject.gifs[i]);
+    const src = encodeURI(currentProject.gifs[i]);
+
+    wrap.classList.add("loading");
+    media.removeAttribute("src");//drop stale gif
+
+    media.onload = () => {
+        if (media.getAttribute("src") === src) wrap.classList.remove("loading");
+    };
+    media.onerror = () => {
+        wrap.classList.remove("loading");
+        console.warn("Failed to load:", src);
+    };
+
+    media.src = src;
 
     const caption = (currentProject.captions || [])[i] || "";
     captionEl.textContent = caption;
