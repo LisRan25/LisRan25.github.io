@@ -136,5 +136,56 @@ body
   width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.2rem;
 }
 
+
+.social-links
+{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:28px;
+}
+
+.social-btn
+{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 16px;
+  background:#1b2030;
+  border:1px solid #262c3d;
+  border-radius:8px;
+  color:var(--text);
+  text-decoration:none;
+  font-size:.9rem;
+  transition:border-color .15s ease, color .15s ease;
+}
+
+.social-btn:hover
+{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+.social-btn svg
+{
+  width:18px;
+  height:18px;
+  flex-shrink:0;
+}
+
+.social-btn svg.fill
+{
+  fill:currentColor;
+}
+
+.social-btn svg.stroke
+{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
 .media-nav.prev{ left:10px; }
 .media-nav.next{ right:10px; }

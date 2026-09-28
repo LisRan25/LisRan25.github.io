@@ -92,7 +92,7 @@ const PROJECTS = [
         gifs: ["images/Ai/Ai-Demo.gif"],
         captions: ["Ai simulation in progress"
         ],
-        link: "ITCH LINK HERE",
+        link: "https://lisran25.itch.io/genetic-algorithms-in-stealth-game-ai",
         blurb: "A university Ai module where I chose to use genetic algorithms to make 2 improving Ai characters in a stealth game.",
         contribution: "I created the logic for both Ai characters as well as the logic that handles their improvements across generations",
         role: "Solo",
