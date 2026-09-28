@@ -116,6 +116,19 @@ body
 
 .project-media-wrap{ position:relative; }
 
+.media-caption {
+    margin: 0;
+    padding: 12px 30px 20px;
+    color: var(--muted);
+    font-size: .85rem;
+    font-style: italic;
+}
+
+#project-link a {
+    color: var(--accent);
+    word-break: break-all;
+}
+
 .media-nav
 {
   position:absolute; top:50%; transform:translateY(-50%);

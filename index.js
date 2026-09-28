@@ -6,7 +6,12 @@ const PROJECTS = [
     thumbnail: "images/Operation Pet/OperationPet.png",
     gifs: ["images/Operation Pet/OperationPet-MagGun.gif",
           "images/Operation Pet/OperationPet-StoryPrompts.gif"
-         ],
+    ],
+    captions: ["Opening the hack mode/Zooming function",
+        "The Overheat and Distract hacks",
+        "The Short Circuit and Suicide hacks"
+    ],
+    link: "https://eldritch-outlaws.itch.io/operation-pet",
     artGradient: "linear-gradient(135deg,#2b3350,#182034)",
     blurb: "3D puzzle platformer with physics puzzles built in Unreal for a Professional Project module.",
     contribution: "I was responsible for the mag-gun the games main mechanic and all of it's systems as well as the pistol shrimp enemy, story prompts, generator functionality and more",
@@ -21,6 +26,11 @@ const PROJECTS = [
         "images/Quick Hack Conversion/QuickHack-OverheatDistract.gif",
         "images/Quick Hack Conversion/QuickHack-ShortCircuitSuicide.gif"
       ],
+      captions: ["Opening the hack mode/Zooming function",
+          "The Overheat and Distract hacks",
+          "The Short Circuit and Suicide hacks"
+      ],
+      link: "https://lisran25.itch.io/cyberpunk-quickhack-system-unity-conversion",
     blurb: "A Unity Conversion of a Unreal Engine project done for a uni Gameplay Programming module.",
     contribution: "I converted all of the systems from the original Unreal version to Unity.",
     role: "Solo",
@@ -35,6 +45,12 @@ const PROJECTS = [
             "images/QuickHackOg/QuickHackOg-ShortCircuit.gif",
             "images/QuickHackOg/QuickHackOg-Suicide.gif"    
         ],
+        captions: ["Opening the hack mode/Zooming function",
+            "The Overheat and Distract hacks",
+            "The Short Circuit hack",
+            "The Suicide Hack"
+        ],
+        link: "https://lisran25.itch.io/cyberpunk-quickhack-system-unity-conversion",
         blurb: "An Unreal Engine project recreating the Quick Hack mechanic from Cyberpunk 2077 for a uni Gameplay Programming module.",
         contribution: "I recreated a base version of the Quick Hack system from Cyberpunk 2077, the idea is this base version should be built in such a way that it could be expanded for a full game release in a professional environment.",
         role: "Solo",
@@ -47,6 +63,10 @@ const PROJECTS = [
        gifs: ["images/Mara/Mara-MovementOptions.gif",
            "images/Mara/Mara-Cooldown.gif"
        ],
+       captions: ["Player using movement options (Sprint, Tac-Sprint and Dash)",
+           "Heat Cooldown"
+       ],
+       link: "https://lisran25.itch.io/marathon-destroyer-movement-recreation",
        blurb: "A small personal project recreating the movement system of the Destroyer shell from Marathon(2026) as well as recreating the games heat system with simple UI.",
        contribution: "I created the movement options available to the Destroyer shell and the games heat/stamina system",
        role: "Solo",
@@ -57,6 +77,9 @@ const PROJECTS = [
         category: "uni",
         thumbnail: "images/Pool/PoolThumb.png",
         gifs: ["images/Pool/Pool-Demo.gif"],
+        captions: ["Gameplay"
+        ],
+        link: "https://github.com/Abertay-University-SDI/cmp208-coursework-bog-dwellers",
         blurb: "A group project for university built on the PlayStation 5 Development Kits.",
         contribution: "I created the aiming UI, Controller Feedback and the sound effects + music. Helped create player input, points system, round changing, options menu.",
         role: "Group",
@@ -67,6 +90,9 @@ const PROJECTS = [
         category: "uni",
         thumbnail: "images/Ai/AiThumb.png",
         gifs: ["images/Ai/Ai-Demo.gif"],
+        captions: ["Ai simulation in progress"
+        ],
+        link:  "ITCH LINK HERE",
         blurb: "A university Ai module where I chose to use genetic algorithms to make 2 improving Ai characters in a stealth game.",
         contribution: "I the logic for both Ai characters as well as the logic that handles their improvements across generations",
         role: "Solo",
@@ -81,6 +107,12 @@ const PROJECTS = [
             "images/GraphShaders/GraphShaders-LightAdjustment2.gif",
             "images/GraphShaders/GraphShaders-Bloom.gif"
         ],
+        captions: ["Vertex Manipulation",
+            "Light Adjustment",
+            "More Light Adjustment",
+            "Post Processing: Bloom Adjustment"
+        ],
+        link: "https://github.com/Abertay-University-SDI/cmp301-cw-KerrRan25.git",
         blurb: "A university project focused on graphics programming with shaders.",
         contribution: "I ",
         role: "Solo",
@@ -91,6 +123,9 @@ const PROJECTS = [
         category: "uni",
         thumbnail: "images/Graph/GraphThumb.png",
         gifs: ["images/Graph/Graph-Demo.gif"],
+        captions: ["Light Adjustment"
+        ],
+        link: "https://github.com/Abertay-University-SDI/cmp203-24-25-assessment-KerrRan25.git",
         blurb: "A university project focused on graphics programming.",
         contribution: "I ",
         role: "Solo",
@@ -104,6 +139,11 @@ const PROJECTS = [
             "images/TLG/TLG-UpgradeDemo2.gif",
             "images/TLG/TLG-UpgradeReplace.gif"
         ],
+        captions: ["Initial Upgrade Selection",
+            "Upgrade in Use",
+            "Upgrade Replacing"
+        ],
+        link: "https://github.com/LisRan25/CMP105-Gastly-Individual-Extension.git",
         blurb: "The personal extension portion of a 1st year games programming built off an intial group project done in SFML.",
         contribution: "Expanded on the HUD, fixed some technical issues and most importantly expanded the updgrade system.",
         role: "Solo/Team",
@@ -147,18 +187,45 @@ let currentIndex = 0;
 function showMedia(i) 
 {
     const media = document.getElementById("project-media");
-  currentIndex = i;
-  media.src = currentProject.gifs[i];
+    const captionEl = document.getElementById("media-caption");
+    currentIndex = i;
+
+    media.src = encodeURI(currentProject.gifs[i]);
+
+    const caption = (currentProject.captions || [])[i] || "";
+    captionEl.textContent = caption;
+    captionEl.style.display = caption ? "block" : "none";
 }
 
 function openProject(list, i) {
-  currentProject = list[i];
-  document.getElementById("project-title").textContent = currentProject.title;
-  document.getElementById("project-role").textContent = currentProject.role;
-  document.getElementById("project-blurb").textContent = currentProject.blurb;
-  document.getElementById("project-contribution").textContent = currentProject.contribution;
-  showMedia(0);
-  backdrop.classList.add("open");
+    currentProject = list[i];
+    document.getElementById("project-title").textContent = currentProject.title;
+    document.getElementById("project-role").textContent = currentProject.role;
+    document.getElementById("project-blurb").textContent = currentProject.blurb;
+    document.getElementById("project-contribution").textContent = currentProject.contribution;
+
+    const linkEl = document.getElementById("project-link");
+    if (currentProject.link) {
+        linkEl.innerHTML = "Link: ";
+        const a = document.createElement("a");
+        a.href = currentProject.link;
+        a.textContent = currentProject.link;
+        a.target = "_blank";
+        a.rel = "noopener";
+        linkEl.appendChild(a);
+        linkEl.style.display = "block";
+    }
+    else {
+        linkEl.style.display = "none";
+    }
+
+    // hide arrows if there's only one gif
+    const multi = currentProject.gifs.length > 1;
+    document.getElementById("media-prev").style.display = multi ? "" : "none";
+    document.getElementById("media-next").style.display = multi ? "" : "none";
+
+    showMedia(0);
+    backdrop.classList.add("open");
 }
 
 document.getElementById("media-prev").addEventListener("click", () => 
