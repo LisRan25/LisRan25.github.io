@@ -5,11 +5,16 @@ const PROJECTS = [
         category: "uni",
         thumbnail: "images/Operation Pet/OperationPet.png",
         gifs: ["images/Operation Pet/OperationPet-MagGun.gif",
-            "images/Operation Pet/OperationPet-StoryPrompts.gif"
+            "images/Operation Pet/OperationPet-PistolShrimp.gif",
+            "images/Operation Pet/OperationPet-MultiStoryPrompt.gif",
+            "images/Operation Pet/OperationPet-SingleStoryPrompt.gif",
+            "images/Operation Pet/OperationPet-GeneratorLever.gif"
         ],
-        captions: ["Opening the hack mode/Zooming function",
-            "The Overheat and Distract hacks",
-            "The Short Circuit and Suicide hacks"
+        captions: ["Magnet Gun in use",
+            "Pistol Shrimp enemy with warning lights and death effects",
+            "Multi-Prompt Story Prompt",
+            "Single-Prompt Story Prompt",
+            "Generator Lever in use"
         ],
         link: "https://eldritch-outlaws.itch.io/operation-pet",
         artGradient: "linear-gradient(135deg,#2b3350,#182034)",
