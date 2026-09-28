@@ -36,7 +36,7 @@ const PROJECTS = [
             "The Short Circuit and Suicide hacks"
         ],
         link: "https://lisran25.itch.io/cyberpunk-quickhack-system-unity-conversion",
-        blurb: "A Unity Conversion of a Unreal Engine project done for a uni Gameplay Programming module.",
+        blurb: "A Unity Conversion of an Unreal Engine project done for a uni Gameplay Programming module.",
         contribution: "I converted all of the systems from the original Unreal version of the project to Unity. This was to get experience converting projects between engines and it served as an oppertunity to improve upon the systems modularity.",
         role: "Solo",
         tags: ["Unity", " C#"],
