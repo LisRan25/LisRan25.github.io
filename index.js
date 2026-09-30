@@ -117,7 +117,7 @@ const PROJECTS = [
             "More Light Adjustment",
             "Post Processing: Bloom Adjustment"
         ],
-        link: "https://github.com/Abertay-University-SDI/cmp301-cw-KerrRan25.git",
+        link: "https://github.com/Abertay-University-SDI/cmp301-cw-LisRan25.git",
         blurb: "A university project focused on graphics programming with shaders.",
         contribution: "I created all features present.",
         role: "Solo",
@@ -129,7 +129,7 @@ const PROJECTS = [
         thumbnail: "images/Graph/GraphThumb.png",
         gifs: ["images/Graph/Graph-Demo.gif"],
         captions: ["Light Adjustment"],
-        link: "https://github.com/Abertay-University-SDI/cmp203-24-25-assessment-KerrRan25.git",
+        link: "https://github.com/Abertay-University-SDI/cmp203-24-25-assessment-LisRan25.git",
         blurb: "A university project focused on graphics programming.",
         contribution: "I created all features present.",
         role: "Solo",
