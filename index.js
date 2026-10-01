@@ -84,7 +84,7 @@ const PROJECTS = [
         gifs: ["images/Pool/Pool-Demo.gif"],
         captions: ["Gameplay"
         ],
-        link: "https://github.com/Abertay-University-SDI/cmp208-coursework-bog-dwellers",
+        link: " ",
         blurb: "A group project for university built on the PlayStation 5 Development Kits.",
         contribution: "I created the aiming UI, Controller Feedback and the sound effects + music. Helped create player input, points system, round changing, options menu.",
         role: "Group",
@@ -117,7 +117,7 @@ const PROJECTS = [
             "More Light Adjustment",
             "Post Processing: Bloom Adjustment"
         ],
-        link: "https://github.com/Abertay-University-SDI/cmp301-cw-LisRan25.git",
+        link: " ",
         blurb: "A university project focused on graphics programming with shaders.",
         contribution: "I created all features present.",
         role: "Solo",
@@ -129,7 +129,7 @@ const PROJECTS = [
         thumbnail: "images/Graph/GraphThumb.png",
         gifs: ["images/Graph/Graph-Demo.gif"],
         captions: ["Light Adjustment"],
-        link: "https://github.com/Abertay-University-SDI/cmp203-24-25-assessment-LisRan25.git",
+        link: " ",
         blurb: "A university project focused on graphics programming.",
         contribution: "I created all features present.",
         role: "Solo",
@@ -147,7 +147,7 @@ const PROJECTS = [
             "Upgrade in Use",
             "Upgrade Replacing"
         ],
-        link: "https://github.com/LisRan25/CMP105-Gastly-Individual-Extension.git",
+        link: " ",
         blurb: "The personal extension portion of a 1st year games programming module, built off an intial group project done in SFML.",
         contribution: "Expanded on the HUD, fixed some technical issues and most importantly expanded the updgrade system.",
         role: "Solo/Team",
